@@ -8,6 +8,4 @@ const points_schema = new Schema({
 
 //Crear modulo
 
-const point_agg = mongoose.model('H-Points', points_schema)
-
-module.exports = point_agg
+export const point_agg = mongoose.model('H-Points', points_schema)

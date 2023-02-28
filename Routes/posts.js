@@ -1,7 +1,7 @@
-import app from '../app'
-import point_agg from '../Models/schema_points'
+import app from '../app.js'
+import {point_agg} from '../Models/schema_points.js'
 import bodyParser from 'body-parser'
-import point_agg_m from '../Models/schema_points_m'
+import {point_agg_m} from '../Models/schema_points_m.js'
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))

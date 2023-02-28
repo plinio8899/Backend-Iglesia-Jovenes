@@ -1,6 +1,6 @@
-import app from './app'
-import mongo from './Routes/mongodb'
-import {setPoints, setPointsM} from './Routes/posts'
+import app from './app.js'
+import mongo from './Routes/mongodb.js'
+import {setPoints, setPointsM} from './Routes/posts.js'
 
 import dotenv from 'dotenv'
 dotenv.config()
