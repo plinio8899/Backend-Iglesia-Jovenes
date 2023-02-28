@@ -25,7 +25,7 @@ export function setPoints() {
     app.get("/h-points", async (req, res) => {
         try {
             const data = await point_agg.find({});
-            res.send({data})
+            res.send("recibido")
         } catch (error) {
             console.log(error)
         }
@@ -49,7 +49,7 @@ export function setPointsM() {
     app.get('/m-points', async (req, res) => {
         try {
             const data = await point_agg_m.find({});
-            res.send({data})
+            res.send("recibido")
         } catch (error) {
             console.log(`Error: ${error}`)
         }
