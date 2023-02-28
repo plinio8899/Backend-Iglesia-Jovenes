@@ -15,7 +15,7 @@ export function setPoints() {
         try {
             const pointdb = new point_agg(body)
             await pointdb.save()
-            res.send(body)
+            res.send("recibido")
         } catch (error) {
             console.error("No se pudo guardar en la base de datos: ", error)
             res.send("No se pudo guardar en la base de datos")
@@ -25,7 +25,7 @@ export function setPoints() {
     app.get("/h-points", async (req, res) => {
         try {
             const data = await point_agg.find({});
-            res.send("recibido")
+            res.send({data})
         } catch (error) {
             console.log(error)
         }
@@ -39,7 +39,7 @@ export function setPointsM() {
         try {
             const pointdb = new point_agg_m(body)
             await pointdb.save()
-            res.send(body)
+            res.send("recibido")
         } catch (error) {
             console.error("No se pudo guardar en la base de datos: ", error)
             res.send("No se pudo guardar en la base de datos")
@@ -49,7 +49,7 @@ export function setPointsM() {
     app.get('/m-points', async (req, res) => {
         try {
             const data = await point_agg_m.find({});
-            res.send("recibido")
+            res.send({data})
         } catch (error) {
             console.log(`Error: ${error}`)
         }
