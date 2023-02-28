@@ -3,9 +3,7 @@ import mongo from './Routes/mongodb.js'
 import {setPoints, setPointsM} from './Routes/posts.js'
 import cors from 'cors'
 
-app.use(cors({
-    origin: 'https://agg-pointer-ipc.netlify.app'
-}));
+app.use(cors())
 
 import dotenv from 'dotenv'
 dotenv.config()
