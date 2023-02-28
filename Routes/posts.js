@@ -51,7 +51,7 @@ export function setPointsM() {
             const data = await point_agg_m.find({});
             res.send({data})
         } catch (error) {
-            console.log(error)
+            console.log(`Error: ${error}`)
         }
     })
 } 
